@@ -31,7 +31,7 @@ navLinks.forEach(link => {
 //galley photos slide show
 
 let currentIndex = 0;
-    const totalSlides = 6; 
+    const totalSlides = 8; 
     const slideInterval = 3000; 
     function updateSliderPosition() {
       const sliderContainer = document.querySelector('.slider-container');

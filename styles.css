@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", serif;
 }
+html,body{
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow: hiden;
+}
 .links{
-    background-color: #194605;
+    background-color: #054b28;
     height: 5vh;
     display: flex;
     justify-content: center;
@@ -24,6 +32,11 @@
 header{
     width: 100%;
     height: 10vh;
+    position: sticky;
+    background-color: #fff;
+    transition: all .6s ease-in-out;
+    top: 0;
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -61,7 +74,7 @@ nav{
     justify-content: center;
     width: 100%;
     height: 60vh;
-    top: 8.8rem;
+    top: 5.3rem;
     left: 0;
     z-index: 999;
     background-color: rgb(250, 248, 248);
@@ -126,18 +139,28 @@ li:hover .about_link_btn{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #137444;
+    background: url("./imgs/bg1.jpg");
+    background-size: cover;
+    background-position: center;
     gap: 3rem;
-    opacity: 80;
 }
 .hero_section h1{
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 300;
+    color: #f3f7f5;
+    font-size: 1.5rem;
+    font-family: "Roboto", serif;
+    font-weight: bold;
+    padding: .4rem;
+    outline: #04a00b;
+    background-color: rgba(2, 103, 26, 0.595);
 }
 .hero span{
-    font-size: 2rem;
-    color: #fff;
+    font-size: 1.5rem;
+    color: #054b28;
+    display: inline-block;
+    padding: .4rem;
+    width: 100%;
+    background-color: rgba(244, 249, 249, 0.595);
+    
 }
 .hero{
     width: 60%;
@@ -146,20 +169,29 @@ li:hover .about_link_btn{
 .important_btns{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .3rem;
     width: 85%;
 }
 .important_btns button{
     padding: .5rem;
     color: #194605;
+    border: 4px solid #054b28;
     font-weight: bold;
     font-style: bold;
     border-radius: 5px;
+    opacity: .9;
+}
+.important_btns button:hover{
+    background-color: #054b28;
+    border: 2px solid #fff;
+    color: #fff;
+    transition: all .3s ease-in-out;
 }
 /*visions and goals section*/
 .vision{
     width: 100%;
     padding: 6rem 4rem;
+    z-index: -2;
 }
 .vision #btn{
     padding: .5rem 1.5rem;
@@ -216,7 +248,7 @@ li:hover .about_link_btn{
     font-size: 20px;
     cursor: pointer;
     padding: 5px 10px;
-    z-index: 2;
+    z-index: 1;
     background: #0383037c;
   }
   .arrow.left {
@@ -285,11 +317,11 @@ li:hover .about_link_btn{
 .why_choose_daxy,.Upcoming_Event{
     margin: 3rem 4rem;
 }
-.why_choose_daxy h2{
+.why_choose_daxy h2,  .Upcoming_Event h2,.vision_description h2{
     font-size: 2rem;
-    color: #04a00b;
+    color: #137444;
 }
-.why_choose_daxy p{
+.why_choose_daxy p,.Upcoming_Event p{
     font-size: 1rem;
     color: #04a00b;
     margin-bottom: 1.5rem;
@@ -299,7 +331,8 @@ li:hover .about_link_btn{
     margin-bottom: 1.5rem;
 }
 .description_photo img,.Event img{
-    width: 20rem;
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 .caption h3{
     font-size: 1.5rem;
@@ -381,9 +414,9 @@ li:hover .about_link_btn{
   /*Upcoming events*/
 
   .Upcoming_Event h3{
-    background-color: #04a00b;
     color: #fff;
     width: 100%;
+    font-size: 1rem;
     padding: .6rem 1.2rem;
   }
   .Upcoming_Event p{
@@ -392,13 +425,15 @@ li:hover .about_link_btn{
   .capt{
     position: absolute; 
     bottom: 0;
-    left: 2%;
+    left: 0;
     margin:0 auto;
-    width: 100%;
+    width: 99%;
     height: 20%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center; 
+    background-color: #137444;
   }
 
   /*footer styles*/
@@ -408,7 +443,7 @@ li:hover .about_link_btn{
   .social_media_links{
     background-color: #137444;
     width: 100%;
-    padding: 1.5rem 3.5rem;
+    padding: 4rem 2.5rem;
     display: flex;
     flex-direction: column;
     margin: 1rem 0;
@@ -416,6 +451,7 @@ li:hover .about_link_btn{
   }
   .social_media_links h3{
     text-transform: uppercase;
+    font-size: 1.5rem;
     color: #fff;
   }
   .icons .fa{
@@ -424,11 +460,11 @@ li:hover .about_link_btn{
     margin: 1rem;
   }
   .label{
-    background-color: #0f5f37;
+    background-color: #054b28;
     color: #b9b9b9;
-    font-size: .6rem;
+    font-size: .8rem;
     text-align: center;
-    padding: .7rem 1rem;
+    padding: 1rem 1rem;
   }
 
 
