@@ -38,6 +38,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: .2rem 1rem;
 }
 
 .logo{
@@ -51,7 +52,7 @@ header {
     border-left: .3rem solid #194605;
     height: 5rem;
     width: 13rem;
-    padding: 1.3rem .5rem;
+    padding: 4%;
 }
 .logo-description h3{
     font-size: 1.5rem;
@@ -189,7 +190,8 @@ li:hover .about_link_btn{
 /*visions and goals section*/
 .vision{
     width: 100%;
-    padding: 6rem 4rem;
+    margin-top: 6rem;
+    padding:0 4rem;
 }
 .vision #btn{
     padding: .5rem 1.5rem;
@@ -222,6 +224,7 @@ li:hover .about_link_btn{
     height: 20rem;
     position: relative;
     overflow: hidden;
+    margin: 1rem auto;
     
   }
   .slider-container {
@@ -259,6 +262,7 @@ li:hover .about_link_btn{
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-bottom: 6rem;
   }
   .indicator {
     width: .8rem;
@@ -457,7 +461,7 @@ li:hover .about_link_btn{
   .icons .fa{
     color: #fff;
     font-size: 3rem;
-    margin: 1rem;
+    margin: 1rem .5rem;
   }
   .label{
     background-color: #054b28;
