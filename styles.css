@@ -10,7 +10,6 @@
 html,body{
     scroll-behavior: smooth;
     height: 100%;
-    overflow: hiden;
 }
 .links{
     background-color: #054b28;
@@ -28,18 +27,19 @@ html,body{
     text-decoration: none;
     color: #e2faf0;
 }
-header{
+header {
     width: 100%;
     height: 10vh;
     position: sticky;
+    top: 0;
     background-color: #fff;
     transition: all .6s ease-in-out;
-    top: 0;
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+
 .logo{
     display: flex;
     align-items: center;
@@ -169,12 +169,12 @@ li:hover .about_link_btn{
     display: flex;
     flex-direction: column;
     gap: .3rem;
-    width: 85%;
+    width: 65%;
 }
 .important_btns button{
     padding: .5rem;
     color: #194605;
-    border: 4px solid #054b28;
+    border: 2px solid #054b28;
     font-weight: bold;
     font-style: bold;
     border-radius: 5px;
@@ -190,7 +190,6 @@ li:hover .about_link_btn{
 .vision{
     width: 100%;
     padding: 6rem 4rem;
-    z-index: -2;
 }
 .vision #btn{
     padding: .5rem 1.5rem;
@@ -336,11 +335,10 @@ li:hover .about_link_btn{
 .caption h3{
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: .5rem;
 }
 .caption p{
     color: #131313;
-    position: absolute;
-    bottom: 0;
     color: #fff;
     text-align: justify;
     margin: 0 2rem;
@@ -352,7 +350,7 @@ li:hover .about_link_btn{
     left: 0;
     width: 100%;
     height: 0%;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -366,10 +364,13 @@ li:hover .about_link_btn{
     animation: fadeIn;
     height: 100%;
   }
+  .description_photo:hover .caption h3{
+    padding-top: 4%;
+  }
   .description_photo:hover .caption p{
     opacity: 1;
     transition: all 1.5s ease-in-out;
-    bottom: 3rem;
+    bottom: 10%;
   }
 /*Admissions links*/
 .admissions_links{
