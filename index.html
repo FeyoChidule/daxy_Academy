@@ -24,8 +24,7 @@
                 <div class="logo-description">
                     <h3>DAXY PVT SS</h3>
                     <p>Turning dreams into exciting achievements </p>
-                </div>
-                
+                </div>  
             </div>
             <nav id="nav">
                 <ul>
@@ -54,11 +53,41 @@
                     <li><a href="#" class="li">Boarding</a></li>
                     <li><a href="#" class="li">Contact us</a></li>
                 </ul>
-            </nav>    
-        <div class="menu">
-            <i class="fa fa-bars"></i>
-            <i class="fa fa-close"></i>
-        </div>
+            </nav> 
+            <div id="navBar">
+                <ul>
+                    <li><a href="#" class="li">Home</a></li>
+                    <li class="feature"><a href="#" id="sub_links">About us 
+                        <i class="fa fa-sort-down"></i> </a>
+                        <ul id="about_link">
+                            <li class="li"><a href="#">Headteacher </a></li>
+                            <li class="li"><a href="#">Weekly news</a></li>
+                        </ul>
+                    </li>
+                    <li class="feature"><a href="#" id="sub_links">Join us 
+                        <i class="fa fa-sort-down"></i> </a>
+                        <ul id="join_link">
+                            <li class="li"><a href="#">admissions </a></li>
+                            <li class="li"><a href="#">vacancies </a></li>
+                        </ul>
+                    </li>
+                    <li class="feature">
+                        <a href="#" id="sub_links">Curricular 
+                        <i class="fa fa-sort-down"></i> 
+                        </a>
+                        <ul id="carricular_link">
+                            <li class="li"><a href="#">academic </a></li>
+                            <li class="li"><a href="#">Extra-curricular </a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="li">Boarding</a></li>
+                    <li><a href="#" class="li">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="menu">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-close"></i>
+            </div>  
     </header>
     <div class="hero_section">
         <div class="hero">
@@ -71,50 +100,53 @@
         <button>VACANCIES</button>
     </div>
     </div>
-
-    <div class="vision">
-        <div class="vision_description">
-            <h2><span>Turning dreams</span> into exciting achievements </h2>
-            <p>Utilize continuous assessments,
-                collaborative study circles,
-                engaging presentations, and
-                comprehensive syllabi coverage
-                to maximize students retention
-                and mastery of subject matter,
-                thereby enhancing university
-                selection rates.</p>
-        </div>
-        <button  id="btn">READ MORE ></button>
-    </div>
-        <div class="slider">
-            <div class="slider-container">
-                <img src="./imgs/pic5.jpg" alt="photo">
-                <img src="./imgs/dis.jpg" alt="photo">
-                <img src="./imgs/lab3.jpg" alt="photo">
-                <img src="./imgs/nt.jpg" alt="photo">
-                <img src="./imgs/pc4.jpg" alt="photo">
-                <img src="./imgs/office.jpg" alt="photo">
-                <img src="./imgs/pt.jpg" alt="photo">
-                <img src="./imgs/pc3.jpg" alt="photo">
+    <div class="wrapper">
+        <div class="vision">
+            <div class="vision_description">
+                <h2>Turning dreams into exciting achievements </h2>
+                <p>Utilize continuous assessments,
+                    collaborative study circles,
+                    engaging presentations, and
+                    comprehensive syllabi coverage
+                    to maximize students retention
+                    and mastery of subject matter,
+                    thereby enhancing university
+                    selection rates.</p>
             </div>
-            <button class="arrow left" onclick="prevSlide()">❮</button>
-            <button class="arrow right" onclick="nextSlide()">❯</button>
+            <button  id="btn">READ MORE <span>></span></button>
         </div>
-          <div class="indicators">
-            <div class="indicator active" onclick="goToSlide(0)"></div>
-            <div class="indicator" onclick="goToSlide(1)"></div>
-            <div class="indicator" onclick="goToSlide(2)"></div>
-            <div class="indicator" onclick="goToSlide(3)"></div>
-            <div class="indicator" onclick="goToSlide(4)"></div>
-            <div class="indicator" onclick="goToSlide(5)"></div>
-            <div class="indicator" onclick="goToSlide(6)"></div>
-            <div class="indicator" onclick="goToSlide(7)"></div>
-          </div>
+        <div class="wrap_slider">
+            <div class="slider">
+                    <div class="slider-container">
+                        <img src="./imgs/pic5.jpg" alt="photo">
+                        <img src="./imgs/dis.jpg" alt="photo">
+                        <img src="./imgs/lab3.jpg" alt="photo">
+                        <img src="./imgs/nt.jpg" alt="photo">
+                        <img src="./imgs/pc4.jpg" alt="photo">
+                        <img src="./imgs/office.jpg" alt="photo">
+                        <img src="./imgs/pt.jpg" alt="photo">
+                        <img src="./imgs/pc3.jpg" alt="photo">
+                    </div>
+                    <button class="arrow left" onclick="prevSlide()">❮</button>
+                    <button class="arrow right" onclick="nextSlide()">❯</button>
+            </div>
+            <div class="indicators">
+                    <div class="indicator active" onclick="goToSlide(0)"></div>
+                    <div class="indicator" onclick="goToSlide(1)"></div>
+                    <div class="indicator" onclick="goToSlide(2)"></div>
+                    <div class="indicator" onclick="goToSlide(3)"></div>
+                    <div class="indicator" onclick="goToSlide(4)"></div>
+                    <div class="indicator" onclick="goToSlide(5)"></div>
+                    <div class="indicator" onclick="goToSlide(6)"></div>
+                    <div class="indicator" onclick="goToSlide(7)"></div>
+            </div>
+        </div>
+    </div>
     
     <div class="vision_n_mission">
         <div class="our_vision">
             <h2>our vision</h2>
-            <div class="vision_description">
+            <div id="vision_description">
                 <div class="coma">
                     <i class="fa fa-quote-left"></i>
                 <i class="fa fa-quote-right"></i>
@@ -124,12 +156,13 @@
                     Private Secondary School 
                     renowned forachieving a 
                     university selection rate 
-                    exceeding 50%</p>
+                    exceeding 50%
+                </p>
             </div>
         </div>
         <div class="our_mission">
             <h2>our mission</h2>
-            <div class="mission_description">
+            <div id="mission_description">
                 <p>Utilize continuous assessments,
                     collaborative study circles,
                     engaging presentations, and
@@ -144,41 +177,43 @@
     <div class="why_choose_daxy">
         <h2>Why choose DAXY ?</h2>
         <p>What makes daxy a leader of education</p>
-        <figure class="description_photo">
-            <img src="./imgs/pc1.jpg" alt="">
-            <figcaption class="caption">
-                
-                <h3>Academic excellence</h3>
-                <p>The standard chunk of Lorem Ipsum 
-                    used since the 1500s is reproduced 
-                    below for those interested. Sections 
-                    1.10.32 and 1.10.33 from "de Finibus 
-                </p>
-            </figcaption>
-        </figure>
-        <figure class="description_photo">
-            <img src="./imgs/pc2.jpg" alt="">
-            <figcaption class="caption">
-                
-                <h3>Co-curricular enrichment</h3>
-                <p>The standard chunk of Lorem Ipsum 
-                    used since the 1500s is reproduced 
-                    below for those interested. Sections 
-                    1.10.32 and 1.10.33 from "de Finibus 
-                </p>
-            </figcaption>
-        </figure>
-        <figure class="description_photo">
-            <img src="./imgs/etc.jpg" alt="">
-            <figcaption class="caption">
-                <h3>Best boarding facilities</h3>
-                <p>The standard chunk of Lorem Ipsum 
-                    used since the 1500s is reproduced 
-                    below for those interested. Sections 
-                    1.10.32 and 1.10.33 from "de Finibus 
-                </p>
-            </figcaption>
-        </figure>
+        <div class="why_us">
+            <figure class="description_photo">
+                <img src="./imgs/pc1.jpg" alt="">
+                <figcaption class="caption">
+                    
+                    <h3>Academic excellence</h3>
+                    <p>The standard chunk of Lorem Ipsum 
+                        used since the 1500s is reproduced 
+                        below for those interested. Sections 
+                        1.10.32 and 1.10.33 from "de Finibus 
+                    </p>
+                </figcaption>
+            </figure>
+            <figure class="description_photo">
+                <img src="./imgs/pc2.jpg" alt="">
+                <figcaption class="caption">
+                    
+                    <h3>Co-curricular enrichment</h3>
+                    <p>The standard chunk of Lorem Ipsum 
+                        used since the 1500s is reproduced 
+                        below for those interested. Sections 
+                        1.10.32 and 1.10.33 from "de Finibus 
+                    </p>
+                </figcaption>
+            </figure>
+            <figure class="description_photo">
+                <img src="./imgs/etc.jpg" alt="">
+                <figcaption class="caption">
+                    <h3>Best boarding facilities</h3>
+                    <p>The standard chunk of Lorem Ipsum 
+                        used since the 1500s is reproduced 
+                        below for those interested. Sections 
+                        1.10.32 and 1.10.33 from "de Finibus 
+                    </p>
+                </figcaption>
+            </figure>
+        </div>
     </div>
     <div class="admissions_links">   
         <div class="admissions_desc">
@@ -194,31 +229,33 @@
             <p><a href="#">admission@daxy.ac.mw</a></p>
         </div>
        <div class="admission_btn">
-        <button class="ad_btn">enroll now > </button>
+        <button class="ad_btn">enroll now <span>></span> </button>
        </div>
     </div>
 
     <div class="Upcoming_Event">
         <h2>Upcoming  Events</h2>
         <p>Some dates for your diary</p>
-        <figure class="Event">
-            <img src="./imgs/ft.jpg" alt="">
-            <figcaption class="capt">
-                <h3>Sports Day</h3>
-            </figcaption>
-        </figure>
-        <figure class="Event">
-            <img src="./imgs/ent.jpg" alt="">
-            <figcaption class="capt"> 
-                <h3>Entertainment day</h3>  
-            </figcaption>
-        </figure>
-        <figure class="Event">
-            <img src="./imgs/nt.jpg" alt="">
-            <figcaption class="capt">
-                <h3>Trip to Mzuzu gov ss</h3>
-            </figcaption>
-        </figure>
+        <div class="upcoming">
+            <figure class="Event">
+                <img src="./imgs/ft.jpg" alt="">
+                <figcaption class="capt">
+                    <h3>Sports Day</h3>
+                </figcaption>
+            </figure>
+            <figure class="Event">
+                <img src="./imgs/ent.jpg" alt="">
+                <figcaption class="capt"> 
+                    <h3>Entertainment day</h3>  
+                </figcaption>
+            </figure>
+            <figure class="Event">
+                <img src="./imgs/nt.jpg" alt="">
+                <figcaption class="capt">
+                    <h3>Trip to Mzuzu gov ss</h3>
+                </figcaption>
+            </figure>
+        </div>
     </div>
 
     <footer>

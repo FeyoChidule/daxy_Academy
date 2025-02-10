@@ -44,9 +44,10 @@ header {
 .logo{
     display: flex;
     align-items: center;
+    height: 100%;
 }
 .logo img{
-    width: 5rem;
+   height: 100%;
 }
 .logo-description{
     border-left: .3rem solid #194605;
@@ -73,10 +74,10 @@ nav{
     display: none;
     justify-content: center;
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     top: 5.3rem;
     left: 0;
-    z-index: 999;
+    z-index: 1000;
     background-color: rgb(250, 248, 248);
 }
 nav ul{
@@ -124,6 +125,12 @@ li:hover .join_link_btn{
 li:hover .about_link_btn{
     display: block;
 }
+#navBar{
+  display: none;
+}
+.menu{
+    display: block;
+}
 .menu i{
     font-size: 1.5rem;
     color: #194605;
@@ -134,7 +141,7 @@ li:hover .about_link_btn{
 /*hero section bellow*/
 .hero_section{
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,18 +207,25 @@ li:hover .about_link_btn{
     color: #194605;
     font-weight: bold;
     margin-bottom: 3rem;
+    transition: all .3s ease-in-out;
+}
+.vision #btn:hover,.ad_btn:hover{
+    background-color: #137444;
+    color: #fff;
+    border: 2px solid #fff;
+   
+}
+.vision #btn:hover span,.ad_btn:hover span{
+    padding-left: .5rem;
+    transition: all .3s ease-in-out;
 }
 .vision_description,.slider{
     width: 100%;
-    margin:auto;
+    margin: 1rem auto;
 }
 .vision_description h2{
-    font-size: 2rem;
     text-align: center;
     color: #04a00b;
-}
-.vision_description h2 span{
-    color: #194605;
 }
 .vision_description p{
     text-align: justify;
@@ -280,15 +294,21 @@ li:hover .about_link_btn{
   /*our visions and missions*/
 
 .vision_n_mission{
+    display: flex;
+    flex-direction: column;
     padding: 6rem 4rem;
-    background-color: #137444;
+    background: linear-gradient(#054b28,#137444);
     color: #93b895;
 }
 .our_mission h2,.our_vision h2{
     font-size: 2rem;
     text-transform: capitalize;
+    color: #cbf6cd;
 }
-.our_vision .vision_description{
+.our_mission p,.our_vision p{
+    color: #abc5ab;
+}
+#vision_description{
     padding: 1rem;
     border: .2rem solid #82a984;
     border-bottom-right-radius: 2rem;
@@ -297,9 +317,10 @@ li:hover .about_link_btn{
     margin: 1rem 0;
     position: relative;
 }
-.mission_description{
+#mission_description{
     text-align: justify;
     margin: 1rem 0;
+    border: none;
 }
 .our_vision{
     margin-bottom: 3rem;
@@ -309,24 +330,25 @@ li:hover .about_link_btn{
     top: -.5rem;
     left: 1rem;
     z-index: 100;
-    background-color: #137444;
+    background: linear-gradient(#054b28,#137444);
     width: 3rem;
     display: flex;
     justify-content: space-around;
     border-radius: 8px;
 }
-/*why choosind daxy academy?*/
+/*why choosing daxy academy?*/
 .why_choose_daxy,.Upcoming_Event{
     margin: 3rem 4rem;
 }
 .why_choose_daxy h2,  .Upcoming_Event h2,.vision_description h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #137444;
+    margin-bottom: .5rem;
 }
 .why_choose_daxy p,.Upcoming_Event p{
     font-size: 1rem;
-    color: #04a00b;
-    margin-bottom: 1.5rem;
+    color: #6d856e;
+    margin-bottom: 1.3rem;
 }
 .description_photo, .Event{
     position: relative;
@@ -339,7 +361,6 @@ li:hover .about_link_btn{
 .caption h3{
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: .5rem;
 }
 .caption p{
     color: #131313;
@@ -354,22 +375,26 @@ li:hover .about_link_btn{
     left: 0;
     width: 100%;
     height: 0%;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center; 
     color: white;
     transition: opacity 0.8s ease-in-out; 
   }
+  .description_photo{
+    margin-bottom: 3rem;
+  }
 
   .description_photo:hover .caption{
     transition: all 1s ease-in-out;
     background: rgba(2, 103, 26, 0.595);
     animation: fadeIn;
+    padding: 1rem;
     height: 100%;
   }
   .description_photo:hover .caption h3{
-    padding-top: 4%;
+    padding-top: 2%;
   }
   .description_photo:hover .caption p{
     opacity: 1;
@@ -380,7 +405,7 @@ li:hover .about_link_btn{
 .admissions_links{
     display: flex;
     flex-direction: column;
-    background-color: #137444;
+    background: linear-gradient(#054b28,#137444);
     padding: 6rem 4rem;
 }
 
@@ -389,7 +414,7 @@ li:hover .about_link_btn{
     font-size: 2rem;
 }
 .admissions_links .p{
-    color: #4bb580;
+    color: #54b182;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -414,9 +439,12 @@ li:hover .about_link_btn{
     text-transform: uppercase;
     font-weight: bold;
     color: #0f5f37;
+    transition: all .3s ease-in-out;
 }
   /*Upcoming events*/
-
+  .Upcoming_Event h2{
+    font-size: 1.5rem;
+  }
   .Upcoming_Event h3{
     color: #fff;
     width: 100%;
@@ -424,7 +452,7 @@ li:hover .about_link_btn{
     padding: .6rem 1.2rem;
   }
   .Upcoming_Event p{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .capt{
     position: absolute; 
@@ -440,12 +468,16 @@ li:hover .about_link_btn{
     background-color: #137444;
   }
 
+  .Event{
+    margin-bottom: 2.5rem;
+  }
+
   /*footer styles*/
   footer{
     width: 100%;
   }
   .social_media_links{
-    background-color: #137444;
+    background: linear-gradient(#137444,#054b28);
     width: 100%;
     padding: 4rem 2.5rem;
     display: flex;
@@ -455,13 +487,18 @@ li:hover .about_link_btn{
   }
   .social_media_links h3{
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
   }
   .icons .fa{
     color: #fff;
     font-size: 3rem;
     margin: 1rem .5rem;
+    transition: all .3s ease-in-out;
+  }
+  .icons .fa:hover{
+    color:#a8c6aa;
+    font-size: 2.8rem;
   }
   .label{
     background-color: #054b28;
@@ -490,7 +527,198 @@ li:hover .about_link_btn{
         opacity: 1;
     }
   }
+  @media (min-width: 768px){
 
+  }
+
+  @media (min-width: 992px){
+    .menu{
+        display: none;
+    }
+    #navBar{
+      display:flex;
+      margin: 0 auto;
+    }
+    #navBar > ul{
+      display: flex;
+      list-style: none;
+    }
+    #navBar > ul li{
+      font-size: 100%;
+      padding-left: 1.5rem;
+    }
+  #navBar > ul li a{
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+  }
+  #navBar > ul li a:hover{
+    color: #3c5347;
+    font-weight: bold;
+  }
+
+  .feature ul{
+      display: none;
+    }
+
+    .feature:hover ul{
+      display: block;
+      list-style: none;
+      transition: all .4s ease-in-out;
+    }
+    .feature #carricular_link,.feature #join_link,.feature #about_link{
+      position: absolute;
+      top: 60%;
+      background-color: #f3f7f5;
+      margin-left: -1rem;
+
+    }
+    .feature #carricular_link li,.feature #join_link li,.feature #about_link li{
+      margin-bottom: .5rem;
+      padding-top: .4rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      width: 100%;
+    }
+    .feature #carricular_link li a{
+      display: inline-block;
+      width: 100%;
+    }
+    #carricular_link a:hover,.feature #join_link a:hover,.feature #about_link a:hover{
+      color: #054b28;
+      font-weight: bold;
+    }
+    .links{
+        justify-content: flex-start;
+        padding-left: 12rem;
+    }
+    header{
+        padding: .2rem 6rem;
+        justify-content: space-between;
+    }
+    .hero{
+      height: 20%;
+      margin: 1.5rem 0;
+      width: 65%;
+      padding: 0;
+    }
+    .hero_section h1,.hero_section span{
+        font-size: 3rem;
+        width: 100%;
+    }
+    .hero_section h1{
+      padding:1rem 3rem;
+    }
+    .important_btns{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .important_btns button{
+        width: 30%;
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+    .vision_description h2{
+        text-align: left;
+        font-size: 2rem;
+    }
+    .vision_description p{
+        font-size: 1.5rem;
+        color:#7c7d7c ;
+    }
+    .vision_n_mission{
+        flex-direction: row;
+        gap: 3rem;
+    }
+    .vision_n_mission h2{
+        font-size: 2rem;
+    }
+    #mission_description p, #vision_description p{
+        font-size: 1.5rem;
+    }
+    .coma{
+      font-size: 3rem;
+      gap: 1rem;
+      top: -1.5rem;
+      left: 3.5rem;
+      width:15%;
+    }
+    #vision_description{
+      padding: 4.5rem ;
+    }
+  .our_mission, .our_vision{
+    width: 50%;
+  }
+  .our_mission h2, .our_vision h2{
+    margin-bottom: 3rem;
+  }
+  .why_choose_daxy h2{
+    font-size: 2rem;
+  }
+  .why_choose_daxy p{
+    font-size: 1.5rem;
+  }
+  .why_us{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .description_photo img{
+    aspect-ratio: 4/3;
+  }
+  .admissions_links{
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+  .admissions_desc,admissions_btn{
+    width: 50%;
+  }
+  .admissions_desc h3{
+    font-size: 2rem;
+    color: #eff1ef;
+  }
+  .admissions_desc  p span,.admissions_desc  p a{
+    font-size: 1.5rem;
+  }
+  .upcoming{
+    display: flex;
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+  .upcoming img{
+    aspect-ratio: 4/3;
+  }
+
+  .Upcoming_Event h2{
+    font-size: 2rem;
+  }
+  .Upcoming_Event p{
+    font-size: 1.5rem;
+  }
+  .social_media_links{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .wrapper{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .wrapper .vision{
+    width: 60%;
+    margin-top: 0;
+  }
+  .wrap_slider{
+    margin-top: 4rem;
+  }
+  }
+
+
+
+  @media (min-width: 1200px){
+    
+  }
 
 
 
